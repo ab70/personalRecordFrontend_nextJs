@@ -1,6 +1,16 @@
+"use client"
+import { useEffect } from 'react';
 import './globals.css'
 
+
 export default function RootLayout({ children }) {
+  
+  useEffect(() => {
+    const use = async () => {
+      (await import('tw-elements')).default;
+    };
+    use();
+  }, []);
   return (
     <html lang="en">
       {/*
